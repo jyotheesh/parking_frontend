@@ -8,7 +8,7 @@ pipeline {​
 ​
             steps {​
 ​
-                git url:'https://github.com/GitRep2018/BOOKLENDING_UI.git'
+                git url:'https://github.com/GitRep2018/ING-Mortgage-UI1.git'​
 ​
             }​
 ​
@@ -26,22 +26,27 @@ pipeline {​
                 npm run build​
 ​
             '''​
-
+​
             }​
 ​
         }​
   stage('Deploy') { ​
-
-            steps {
-		sh '''    
-                cd /var/lib/jenkins/workspace/BOOKLENDING_UI_PIPELINE/dist​
 ​
-                chmod -R 777 BookLendSystem​
+            steps {​
 ​
-                cp -rf BookLendSystem /opt/apache-tomcat-9.0.26/webapps/
-            '''
-
-            }
-
-        }
-	   }
+                sh '''​
+​
+                cd /var/lib/jenkins/workspace/pipeline-front-end
+​
+                chmod -R 777 build/​
+​
+                cp -rf build/ /opt/apache-tomcat-9.0.26/webapps/​
+​
+            '''​
+​
+            }​
+​
+        }​
+    }
+	  
+ }
