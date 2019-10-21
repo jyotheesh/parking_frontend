@@ -3,8 +3,10 @@ node('master'){
 	                  git 'https://github.com/mythribhay/Inglibraryui'
 	              }
 	   stage('angular build'){
+		     '''
 	             sh 'npm install'
 	             sh 'ng build '
+		     '''
 	         }
 	
 	}
