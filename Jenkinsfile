@@ -8,7 +8,7 @@ pipeline {​
 ​
             steps {​
 ​
-                git url:'https://github.com/GitRep2018/ING-Mortgage-UI1.git'​
+                git url:'https://github.com/jyotheesh/parking_front_end.git'​
 ​
             }​
 ​
